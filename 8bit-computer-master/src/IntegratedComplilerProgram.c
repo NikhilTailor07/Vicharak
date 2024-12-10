@@ -21,14 +21,14 @@ typedef enum
     TOKEN_UNKNOWN
 } TokenType;
 
-// Token Structure
+//  Structure of Token
 typedef struct
 {
     TokenType type;
     char text[100];
 } Token;
 
-// AST Node Types
+// AST Node Types  for 8 bit Computer
 typedef enum
 {
     NODE_PROGRAM,
@@ -40,7 +40,7 @@ typedef enum
     NODE_UNKNOWN
 } NodeType;
 
-// AST Node Structure
+// AST Node Structure  for 8 bit Computer
 typedef struct ASTNode
 {
     NodeType type;
@@ -49,7 +49,7 @@ typedef struct ASTNode
     int child_count;
 } ASTNode;
 
-// Global Variables
+// Global Variables  for 8 bit Computer
 Token tokens[100];
 int token_index = 0;
 int token_count = 0;
@@ -57,7 +57,7 @@ int symbol_count = 0;
 int current_token_index = 0;
 Token current_token;
 
-// Function Prototypes
+// Function Prototypes  for 8 bit Computer
 void lexer(const char *input);
 Token getNextToken();
 ASTNode *parseProgram();
@@ -67,13 +67,13 @@ void generateCode(ASTNode *node);
 void emit(const char *instruction);
 void testCompiler(const char *inputProgram);
 
-// Emit assembly code
+// Emit assembly code  for 8 bit Computer
 void emit(const char *instruction)
 {
     printf("%s\n", instruction);
 }
 
-// Lexer: Tokenize the input
+// Lexer: Tokenize the input for 8 bit Computer
 void lexer(const char *input)
 {
     int len = strlen(input);
@@ -159,7 +159,7 @@ Token getNextToken()
     return (Token){TOKEN_EOF, ""};
 }
 
-// Parser: Parse a program
+// Parser: Parse a program for 8 bit Computer
 ASTNode *parseProgram()
 {
     ASTNode *program = malloc(sizeof(ASTNode));
@@ -180,7 +180,7 @@ ASTNode *parseProgram()
     return program;
 }
 
-// Parser: Parse a statement
+// Parser: Parse a statement  for 8 bit Computer
 ASTNode *parseStatement()
 {
     Token token = getNextToken();
@@ -238,7 +238,7 @@ ASTNode *parseStatement()
     return NULL;
 }
 
-// Parser: Parse an expression
+// Parser: Parse an expression  for 8 bit Computer
 ASTNode *parseExpression()
 {
     Token token = getNextToken();
