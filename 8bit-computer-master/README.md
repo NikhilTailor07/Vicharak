@@ -1,4 +1,3 @@
-markdown
 # 8-bit Computer in Verilog
 
 This project implements an 8-bit CPU in Verilog, featuring a basic instruction set and 256 bytes of RAM. It provides a simple yet comprehensive example of how a CPU operates at the hardware level.
